@@ -27,7 +27,7 @@ export function Chart() {
     function get_price_data(num_total_purchases: number, time_since_start: number, quantity: number) {
         var initial_price = 100;
         var increase_factor = 1.5;
-        var decay_factor = 0.09;
+        var decay_factor = 0.01; // to make the graph look nicer
         var numerator = initial_price * (increase_factor ** num_total_purchases) * (increase_factor ** quantity - 1);
         var denominator = Math.exp(decay_factor * time_since_start) * (increase_factor - 1);
         var price = numerator / denominator;
