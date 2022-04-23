@@ -4,7 +4,7 @@ import { useCallback, useMemo, useState } from 'react'
 import { toBN } from 'starknet/dist/utils/number'
 import { bnToUint256, uint256ToBN } from 'starknet/dist/utils/uint256'
 import { ConnectWallet } from '~/components/ConnectWallet'
-import { TransactionList } from '~/components/TransactionList'
+import { PurchaseList } from '~/components/PurchaseList'
 import { useTokenContract } from '~/hooks/token'
 
 function UserBalance() {
@@ -106,7 +106,7 @@ const TokenPage: NextPage = () => {
       <p>Connected: {account}</p>
       <UserBalance />
       <MintToken />
-      <TransactionList />
+      <PurchaseList />
     </div>
   )
 }
