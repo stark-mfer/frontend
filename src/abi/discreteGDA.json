@@ -89,79 +89,17 @@
             }
         ],
         "keys": [],
-        "name": "purchase_event",
+        "name": "DiscreteGDA_purchase_event",
         "type": "event"
     },
     {
         "inputs": [
             {
-                "name": "name",
-                "type": "felt"
-            },
-            {
-                "name": "symbol",
-                "type": "felt"
-            },
-            {
-                "name": "owner",
-                "type": "felt"
-            },
-            {
-                "name": "_initialPrice",
-                "type": "felt"
-            },
-            {
-                "name": "_scaleFactor",
-                "type": "felt"
-            },
-            {
-                "name": "_decayConstant",
-                "type": "felt"
-            },
-            {
-                "name": "base_token_uri_len",
-                "type": "felt"
-            },
-            {
-                "name": "base_token_uri",
-                "type": "felt*"
-            },
-            {
-                "name": "token_uri_suffix",
-                "type": "felt"
-            }
-        ],
-        "name": "constructor",
-        "outputs": [],
-        "type": "constructor"
-    },
-    {
-        "inputs": [
-            {
-                "name": "numTokens",
-                "type": "felt"
-            },
-            {
-                "name": "to",
-                "type": "felt"
-            },
-            {
-                "name": "value",
-                "type": "Uint256"
-            }
-        ],
-        "name": "purchaseTokens",
-        "outputs": [],
-        "type": "function"
-    },
-    {
-        "inputs": [
-            {
                 "name": "numTokens",
                 "type": "felt"
             }
         ],
-        "name": "purchase_price",
+        "name": "DiscreteGDA_purchase_price",
         "outputs": [
             {
                 "name": "res",
@@ -178,7 +116,7 @@
                 "type": "felt"
             }
         ],
-        "name": "price_arguments",
+        "name": "DiscreteGDA_price_function_arguments",
         "outputs": [
             {
                 "name": "res_len",
@@ -195,171 +133,40 @@
     {
         "inputs": [
             {
-                "name": "interfaceId",
+                "name": "_initialPrice",
                 "type": "felt"
             }
         ],
-        "name": "supportsInterface",
-        "outputs": [
-            {
-                "name": "success",
-                "type": "felt"
-            }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-    },
-    {
-        "inputs": [],
-        "name": "name",
-        "outputs": [
-            {
-                "name": "name",
-                "type": "felt"
-            }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-    },
-    {
-        "inputs": [],
-        "name": "symbol",
-        "outputs": [
-            {
-                "name": "symbol",
-                "type": "felt"
-            }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-    },
-    {
-        "inputs": [
-            {
-                "name": "owner",
-                "type": "felt"
-            }
-        ],
-        "name": "balanceOf",
-        "outputs": [
-            {
-                "name": "balance",
-                "type": "Uint256"
-            }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-    },
-    {
-        "inputs": [
-            {
-                "name": "tokenId",
-                "type": "Uint256"
-            }
-        ],
-        "name": "ownerOf",
-        "outputs": [
-            {
-                "name": "owner",
-                "type": "felt"
-            }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-    },
-    {
-        "inputs": [
-            {
-                "name": "tokenId",
-                "type": "Uint256"
-            }
-        ],
-        "name": "getApproved",
-        "outputs": [
-            {
-                "name": "approved",
-                "type": "felt"
-            }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-    },
-    {
-        "inputs": [
-            {
-                "name": "owner",
-                "type": "felt"
-            },
-            {
-                "name": "operator",
-                "type": "felt"
-            }
-        ],
-        "name": "isApprovedForAll",
-        "outputs": [
-            {
-                "name": "isApproved",
-                "type": "felt"
-            }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-    },
-    {
-        "inputs": [
-            {
-                "name": "token_id",
-                "type": "Uint256"
-            }
-        ],
-        "name": "tokenURI",
-        "outputs": [
-            {
-                "name": "token_uri_len",
-                "type": "felt"
-            },
-            {
-                "name": "token_uri",
-                "type": "felt*"
-            }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-    },
-    {
-        "inputs": [
-            {
-                "name": "to",
-                "type": "felt"
-            },
-            {
-                "name": "tokenId",
-                "type": "Uint256"
-            }
-        ],
-        "name": "approve",
+        "name": "DiscreteGDA_setInitialPrice",
         "outputs": [],
         "type": "function"
     },
     {
         "inputs": [
             {
-                "name": "operator",
-                "type": "felt"
-            },
-            {
-                "name": "approved",
+                "name": "_scaleFactor",
                 "type": "felt"
             }
         ],
-        "name": "setApprovalForAll",
+        "name": "DiscreteGDA_setScaleFactor",
         "outputs": [],
         "type": "function"
     },
     {
         "inputs": [
             {
-                "name": "_from",
+                "name": "_decayConstant",
+                "type": "felt"
+            }
+        ],
+        "name": "DiscreteGDA_setDecayConstant",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "numTokens",
                 "type": "felt"
             },
             {
@@ -367,83 +174,11 @@
                 "type": "felt"
             },
             {
-                "name": "tokenId",
+                "name": "value",
                 "type": "Uint256"
             }
         ],
-        "name": "transferFrom",
-        "outputs": [],
-        "type": "function"
-    },
-    {
-        "inputs": [
-            {
-                "name": "_from",
-                "type": "felt"
-            },
-            {
-                "name": "to",
-                "type": "felt"
-            },
-            {
-                "name": "tokenId",
-                "type": "Uint256"
-            },
-            {
-                "name": "data_len",
-                "type": "felt"
-            },
-            {
-                "name": "data",
-                "type": "felt*"
-            }
-        ],
-        "name": "safeTransferFrom",
-        "outputs": [],
-        "type": "function"
-    },
-    {
-        "inputs": [
-            {
-                "name": "base_token_uri_len",
-                "type": "felt"
-            },
-            {
-                "name": "base_token_uri",
-                "type": "felt*"
-            },
-            {
-                "name": "token_uri_suffix",
-                "type": "felt"
-            }
-        ],
-        "name": "setTokenURI",
-        "outputs": [],
-        "type": "function"
-    },
-    {
-        "inputs": [
-            {
-                "name": "to",
-                "type": "felt"
-            },
-            {
-                "name": "tokenId",
-                "type": "Uint256"
-            }
-        ],
-        "name": "mint",
-        "outputs": [],
-        "type": "function"
-    },
-    {
-        "inputs": [
-            {
-                "name": "tokenId",
-                "type": "Uint256"
-            }
-        ],
-        "name": "burn",
+        "name": "DiscreteGDA_purchaseTokens",
         "outputs": [],
         "type": "function"
     }

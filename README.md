@@ -17,8 +17,14 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 - [x] Point the front-end to the deployed GDA contract
 - [x] Add a "Mint" button
-- [ ] Polish wallet connection
-- [ ] Update the chart to display historical purhcases (by looking at the `purchase_event` events)
+- [x] Constants for deployed addresses
+- [x] Add image of existing mfer
+- [ ] Deploy this app to Vercel
+- [ ] Display the current price of an mfer (@rootulp blocked)
+- [ ] Display number of mfers left (needs a new view method on contract @fred)
+- [ ] Implement disconnect wallet (seems tricky b/c no `disconnect` function in `@starknet-react/core`)
+- [ ] Add a chart that displays historical purchase prices (by looking at the `purchase_event` events)
+- [ ] Polish UI
 
 ## Links
 

@@ -1,12 +1,7 @@
-import { useStarknetCall } from '@starknet-react/core'
 import type { NextPage } from 'next'
-import { useMemo } from 'react'
-import { toBN } from 'starknet/dist/utils/number'
 import { ConnectWallet } from '~/components/ConnectWallet'
-import { PurchaseList } from '~/components/PurchaseList'
 import { MintButton } from '~/components/MintButton'
-import { useDiscreteGDA } from "../hooks/discreteGda"
-import { MintSection } from "../components/MintSection"
+import { useStarkMfer } from '../hooks/useStarkMfer'
 import { Chart } from '~/components/Chart'
 import Image from 'next/image'
 import mfers from 'nfts/flipped/images/1.png'
@@ -14,22 +9,7 @@ declare module "*.png"
 
 
 const Home: NextPage = () => {
-  const { contract: discreteGDA } = useDiscreteGDA()
-
-
-  const { data: nameResult } = useStarknetCall({
-    contract: discreteGDA,
-    method: 'name',
-    args: [],
-  })
-
-  const nameValue = useMemo(() => {
-    console.log(nameResult)
-    if (nameResult && nameResult.length > 0) {
-      const value = toBN(nameResult[0])
-      return value.toString(10)
-    }
-  }, [nameResult])
+  const { contract: starkMfer } = useStarkMfer()
 
   return (
     <div>
@@ -47,6 +27,7 @@ const Home: NextPage = () => {
 
       <h2>Projected Future Price</h2>
       <p> The chart projects the price decline of the NFT over time given Gradual Dutch Auctions (GDAs) and the assumption that no future purchases take place. To learn more about GDAs check: <a href="https://www.paradigm.xyz/2022/04/gda">Paradigm</a></p>
+      <p>contract: {starkMfer?.address}</p>
       <Chart />
 
       <h2>About</h2>

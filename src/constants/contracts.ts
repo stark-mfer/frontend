@@ -1,0 +1,1 @@
+export const ERC721_STARK_MFER = "0x04ffe192e88fa9239c633c2f6c39ae1b67097d896b8564ae331f9ecb0e9c64fc"

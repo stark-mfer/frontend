@@ -1,8 +1,8 @@
 import { useStarknet, useStarknetCall, useStarknetInvoke } from '@starknet-react/core'
-import {React, useMemo} from 'react'
-import { useDiscreteGDA } from '~/hooks/discreteGda'
-import { toBN } from "starknet/dist/utils/number"
+import React, { useMemo } from 'react'
+import { useStarkMfer } from '~/hooks/useStarkMfer'
 import styled from 'styled-components'
+import { toBN } from "starknet/dist/utils/number";
 
 // Styled component named StyledButton
 const StyledButton = styled.button`
@@ -22,48 +22,40 @@ const StyledButton = styled.button`
 
 export function MintButton() {
   const { account } = useStarknet()
-  const { contract: discreteGDA } = useDiscreteGDA()
-  const { loading, error, reset, invoke } = useStarknetInvoke({ contract: discreteGDA, method: 'purchaseTokens' })
+  const { contract: starkMfer } = useStarkMfer()
+  const { data: purchasePrice, loading: purchaseLoading, error: purchaseError } = useStarknetCall({
+    contract: starkMfer,
+    method: 'DiscreteGDA_purchase_price',
+    args: ['1'],
+  })
+//   const purchasePriceValue = useMemo(() => {
+//     console.log(purchasePrice)
+//     if (purchasePrice && purchasePrice.length > 0) {
+//       const value = toBN(purchasePrice[0])
+//       return value.toString(10)
+//     }
+//   }, [purchasePrice])
 
-
-  console.log( 'loading', loading, 'error', error, )
+  const { invoke } = useStarknetInvoke({ contract: starkMfer, method: 'purchaseTokens' })
 
   if (!account) {
     return null
   }
 
   const onMintClicked = async () => {
-	console.log('clicked')
-	console.log(account)
-	let ret = await invoke({ args: ['0x1', account, ['0x1', '0x0']] })
-	console.log(ret)
+    console.log('clicked')
+    console.log(account)
+    let ret = await invoke({ args: ['0x1', account, ['0x1', '0x0']] })
+    console.log(ret)
   }
 
-
-/* args
-        "data": [
-            {
-                "name": "numTokens",
-                "type": "felt"
-            },
-            {
-                "name": "to",
-                "type": "felt"
-            },
-            {
-                "name": "value",
-                "type": "Uint256"
-            }
-        ],
-		*/
-
-// TODO: pull purchase price from contract
 
   return (
     <div>
       <StyledButton onClick={onMintClicked} >
-	  	purchase stark mfers
-	  </StyledButton>
+          purchase stark mfers
+      </StyledButton>
+      {/* {purchasePriceValue} ETH */}
     </div>
   )
 }
