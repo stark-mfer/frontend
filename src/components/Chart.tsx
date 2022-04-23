@@ -48,19 +48,9 @@ export function Chart() {
         time_since_start = time_since_start + 5;
         array_time.push(i)
     }
-
-    // var quantity = 2;
-    // for (let i = 0; i < total_supply; i++) {
-    //     array_values_2.push(get_price_data(num_total_purchases, time_since_start, quantity));
-    //     num_total_purchases++;
-    //     time_since_start = time_since_start + 5;
-    //     array_time.push(i)
-    // }
-    // define the data
     const labels = array_time;
     let data_1 = array_values_1;
     // let data_2 = array_values_2;
-
 
     // options for labelling
     const options = {
@@ -86,7 +76,6 @@ export function Chart() {
                 }
             }
         }
-
     };
 
     const data_line = {
