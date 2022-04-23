@@ -25,7 +25,7 @@ ChartJS.register(
 export function Chart() {
     // Function to calculate price
     function get_price_data(num_total_purchases: number, time_since_start: number, quantity: number) {
-        var initial_price = 10;
+        var initial_price = 100;
         var increase_factor = 1.5;
         var decay_factor = 0.09;
         var numerator = initial_price * (increase_factor ** num_total_purchases) * (increase_factor ** quantity - 1);
@@ -44,7 +44,7 @@ export function Chart() {
     var total_supply = 100;
     for (let i = 0; i < total_supply; i++) {
         array_values_1.push(get_price_data(num_total_purchases, time_since_start, quantity));
-        num_total_purchases++;
+        // num_total_purchases++;
         time_since_start = time_since_start + 5;
         array_time.push(i)
     }
@@ -67,7 +67,7 @@ export function Chart() {
         scales: {
             x: {
                 title: {
-                    display: true, text: 'block number'
+                    display: true, text: 'time in seconds'
                 }
             },
             y: {
@@ -91,6 +91,6 @@ export function Chart() {
     }
 
     return (
-        <Line margin={"auto"} width={600} height={300} data={data_line} options={options} />
+        <Line width={600} height={300} data={data_line} options={options} />
     )
 }
