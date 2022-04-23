@@ -4,7 +4,7 @@ import { useMemo } from 'react'
 import { toBN } from 'starknet/dist/utils/number'
 import { ConnectWallet } from '~/components/ConnectWallet'
 import { MintButton } from '~/components/MintButton'
-import { useStarkMfer } from "../hooks/discreteGda"
+import { useStarkMfer } from '../hooks/useStarkMfer'
 import { Chart } from '~/components/Chart'
 
 

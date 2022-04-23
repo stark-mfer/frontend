@@ -1,7 +1,6 @@
-import { useStarknet, useStarknetCall, useStarknetInvoke } from '@starknet-react/core'
-import {React, useMemo} from 'react'
-import { useStarkMfer } from '~/hooks/discreteGda'
-import { toBN } from "starknet/dist/utils/number"
+import { useStarknet, useStarknetInvoke } from '@starknet-react/core'
+import React from 'react'
+import { useStarkMfer } from '~/hooks/useStarkMfer'
 import styled from 'styled-components'
 
 // Styled component named StyledButton
