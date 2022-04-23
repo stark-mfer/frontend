@@ -8,7 +8,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <StarknetProvider autoConnect connectors={connectors}>
       <NextHead>
-        <title>StarkNet ❤️ React</title>
+        <title>Herodotus</title>
       </NextHead>
       <Component {...pageProps} />
     </StarknetProvider>
