@@ -8,6 +8,9 @@ import { ERC721_STARK_MFER } from "../constants/contracts"
 import styled from 'styled-components'
 declare module "*.png"
 
+const StyledFooter = styled.footer`
+    margin-top: 50px;
+`
 
 const StyledDescription = styled.div`
     font-size: 24px;
@@ -51,20 +54,16 @@ const Home: NextPage = () => {
             <SideContainer>
                 <MintButton />
                 <StyledDescription>
-                <a href={`https://testnet.playoasis.xyz/collection/${ERC721_STARK_MFER}`}>Check it on Oasis</a>
+                    check it on <a href={`https://testnet.playoasis.xyz/collection/${ERC721_STARK_MFER}`}>oasis</a> or <a href={`https://goerli.voyager.online/contract/${ERC721_STARK_MFER}`}>voyager</a>
                 </StyledDescription>
             </SideContainer>
         </MainContainer>
-                <StyledDescription >
-        contract: <a href={`https://goerli.voyager.online/contract/${ERC721_STARK_MFER}`}>{ERC721_STARK_MFER}</a>
-                </StyledDescription>
-
-        <h2>projected future price</h2>
-        <StyledDescription> the chart projects the price decline of the NFT over time given Gradual Dutch Auctions (GDAs) and the assumption that no future purchases take place. to learn more about GDAs check: <a href="https://www.paradigm.xyz/2022/04/gda">Paradigm</a></StyledDescription>
+        <h2>projected mint price</h2>
+        <StyledDescription> assuming that no future purchases take place. to learn more about gradual dutch auctions see this giga 🧠 <a href="https://www.paradigm.xyz/2022/04/gda">writing</a></StyledDescription>
         <Chart />
-
-        <p> mfers on starknet, made with ❤️  @ ETHAmsterdam. art by sartoshi.  </p>
-        <p>github <a href="https://github.com/stark-mfer">stark-mfer</a></p>
+        <StyledFooter>
+            made with ❤️ at <a href="https://amsterdam.ethglobal.com/">EthAmsterdam</a>. art by <a href="https://twitter.com/sartoshi_nft">sartoshi</a>. github <a href="https://github.com/stark-mfer">stark-mfer</a>
+        </StyledFooter>
         </WrapperContainer>
     </div>
   )
