@@ -8,7 +8,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <StarknetProvider autoConnect connectors={connectors}>
       <NextHead>
-        <title>Herodotus</title>
+        <title>stark mfers</title>
       </NextHead>
       <Component {...pageProps} />
     </StarknetProvider>

@@ -64,11 +64,14 @@ const Home: NextPage = () => {
 
   return (
     <div>
-      <h2>Wallet</h2>
+      <h2>my starknet account</h2>
       <ConnectWallet />
+      <h2>stark mfers</h2>
+	  <p> mfers on starknet, made with ❤️  @ ETHAmsterdam. art by sartoshi.  </p>
       <p>NFT Name: {nameValue}</p>
       <MintSection />
       <PurchaseList />
+      <p>Address: {counter?.address}</p>
       <Line data = {data_line}/>
     </div>
   )
