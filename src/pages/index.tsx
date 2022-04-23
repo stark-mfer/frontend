@@ -32,10 +32,8 @@ const Home: NextPage = () => {
     <div>
       <h2>stark mfers</h2>
       <ConnectWallet />
-	  <p> mfers on starknet, made with ❤️  @ ETHAmsterdam. art by sartoshi.  </p>
-      <p>NFT Name: {nameValue}</p>
+      <p> mfers on starknet, made with ❤️  @ ETHAmsterdam. art by sartoshi.  </p>
       <IncrementCounter />
-      <h2>Recent Transactions</h2>
       <Chart />
     </div>
   )
