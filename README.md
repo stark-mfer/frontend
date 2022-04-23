@@ -17,9 +17,12 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 - [x] Point the front-end to the deployed GDA contract
 - [x] Add a "Mint" button
-- [ ] Polish wallet connection
-- [ ] Constants for deployed addresses
-- [ ] Update the chart to display historical purhcases (by looking at the `purchase_event` events)
+- [x] Constants for deployed addresses
+- [ ] Add image of existing mfer
+- [ ] Display number of mfers left
+- [ ] Implement disconnect wallet (seems tricky b/c no `disconnect` function in `@starknet-react/core`)
+- [ ] Add a chart that displays historical purchase prices (by looking at the `purchase_event` events)
+- [ ] Polish UI
 
 ## Links
 
