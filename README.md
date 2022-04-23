@@ -1,4 +1,4 @@
-# eth-amsterdam-front
+# stark-mfer-frontend
 
 This is the front-end for [https://github.com/rootulp/eth-amsterdam](https://github.com/rootulp/eth-amsterdam)
 
@@ -20,7 +20,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Tasks
 
-1. Point the front-end to the deployed GDA contract
-1. Add a "Mint" button
-1. Update the chart to display historical purhcases (by looking at the `purchase_event` events)
-1. Polish wallet connection
+- [ ] Point the front-end to the deployed GDA contract
+- [ ] Add a "Mint" button
+- [ ] Polish wallet connection
+- [ ] Update the chart to display historical purhcases (by looking at the `purchase_event` events)
