@@ -16,10 +16,7 @@ const Home: NextPage = () => {
   return (
     <div>
       <Header />
-      <Image src={mfers} alt="mfer 1"
-        width={250}
-        height={250}/>
-
+      <Image src={mfers} alt="mfer 1" width={250} height={250}/>
       <MintButton />
       contract: <a href={`https://goerli.voyager.online/contract/${ERC721_STARK_MFER}`}>{ERC721_STARK_MFER}</a>
 

@@ -1,6 +1,4 @@
-# stark-mfer-frontend
-
-This is the front-end for [https://github.com/rootulp/eth-amsterdam](https://github.com/rootulp/eth-amsterdam)
+# frontend
 
 ## Installation
 
