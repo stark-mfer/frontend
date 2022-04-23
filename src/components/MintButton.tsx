@@ -31,37 +31,19 @@ export function MintButton() {
   }
 
   const onMintClicked = async () => {
-	console.log('clicked')
-	console.log(account)
-	let ret = await invoke({ args: ['0x1', account, ['0x1', '0x0']] })
-	console.log(ret)
+    console.log('clicked')
+    console.log(account)
+    let ret = await invoke({ args: ['0x1', account, ['0x1', '0x0']] })
+    console.log(ret)
   }
 
 
-/* args
-        "data": [
-            {
-                "name": "numTokens",
-                "type": "felt"
-            },
-            {
-                "name": "to",
-                "type": "felt"
-            },
-            {
-                "name": "value",
-                "type": "Uint256"
-            }
-        ],
-		*/
-
 // TODO: pull purchase price from contract
-
   return (
     <div>
       <StyledButton onClick={onMintClicked} >
-	  	purchase stark mfers
-	  </StyledButton>
+          purchase stark mfers
+      </StyledButton>
     </div>
   )
 }
