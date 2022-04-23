@@ -6,49 +6,14 @@ import { ConnectWallet } from '~/components/ConnectWallet'
 import { IncrementCounter } from '~/components/IncrementCounter'
 import { TransactionList } from '~/components/TransactionList'
 import { useCounterContract } from '~/hooks/counter'
-import { Line } from 'react-chartjs-2'
-import {
-  Chart as ChartJS,
-  ArcElement,
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
-  Title,
-  Tooltip,
-  Legend,
-} from 'chart.js';
 import { useDiscreteGDA } from "../hooks/gda"
+import { Chart } from '~/components/Chart'
 
-ChartJS.register(
-  ArcElement,
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
-  Title,
-  Tooltip,
-  Legend
-)
 
 const Home: NextPage = () => {
   const { contract: counter } = useCounterContract()
   const { contract: discreteGDA } = useDiscreteGDA()
 
-  // This is the frontend chart
-  const labels = ['January', 'February', 'March'];
-
-  const data_line = {
-    labels,
-    datasets: [
-      {
-        label: 'Dataset 1',
-        data: [1, 2, 3],
-        borderColor: 'rgb(255, 99, 132)',
-        backgroundColor: 'rgba(255, 99, 132, 0.5)',
-      }
-    ],
-  }
 
   const { data: counterResult } = useStarknetCall({
     contract: counter,
@@ -88,7 +53,7 @@ const Home: NextPage = () => {
       <IncrementCounter />
       <h2>Recent Transactions</h2>
       <TransactionList />
-      <Line data = {data_line}/>
+      <Chart />
     </div>
   )
 }
