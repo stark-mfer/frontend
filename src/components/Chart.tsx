@@ -21,6 +21,17 @@ ChartJS.register(
   Tooltip,
   Legend
 )
+import styled from "styled-components";
+
+const StyledDiv = styled.div`
+  color: #000;
+  font-size: 28px;
+  width: 600px;
+  line-height: 1.3em;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-align: center;
+  transition: all 0.3s ease 0s`;
 
 export function Chart() {
 
@@ -78,7 +89,7 @@ export function Chart() {
         scales: {
             x: { 
                 title: { 
-                    display: true, text: 'Time in Seconds'
+                    display: true, text: 'Time in Blocks'
                 }
             },
             y: {
@@ -110,8 +121,9 @@ export function Chart() {
     }
 
     return (
-        <div> 
+        <StyledDiv>
         < Line data = {data_line} options = {options} />
-        </div>)
+        </StyledDiv>
+    )
 }
 
