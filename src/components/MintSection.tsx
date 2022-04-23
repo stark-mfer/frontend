@@ -1,11 +1,11 @@
 import { useStarknet, useStarknetCall, useStarknetInvoke } from '@starknet-react/core'
 import React, { useMemo } from 'react'
 import { toBN } from "starknet/dist/utils/number"
-import { useDiscreteGDA } from "../hooks/discreteGda"
+import { useStarkMfer } from "../hooks/discreteGda"
 
 export function MintSection() {
   const { account } = useStarknet()
-  const { contract: discreteGDA } = useDiscreteGDA()
+  const { contract: discreteGDA } = useStarkMfer()
   const { invoke: purchaseTokens } = useStarknetInvoke({ contract: discreteGDA, method: 'purchaseTokens' })
   const NUM_TOKENS = 1;
 

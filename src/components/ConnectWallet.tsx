@@ -20,7 +20,7 @@ export function ConnectWallet() {
   const { account, connect } = useStarknet()
 
   if (account) {
-      return <StyledButton>{shortenAddress(account)}</StyledButton>
+      return <StyledButton onClick={() => {}}>{shortenAddress(account)}</StyledButton>
   }
 
   return <StyledButton onClick={() => connect(new InjectedConnector())}>connect wallet</StyledButton>

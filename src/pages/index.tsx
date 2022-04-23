@@ -3,15 +3,13 @@ import type { NextPage } from 'next'
 import { useMemo } from 'react'
 import { toBN } from 'starknet/dist/utils/number'
 import { ConnectWallet } from '~/components/ConnectWallet'
-import { PurchaseList } from '~/components/PurchaseList'
 import { MintButton } from '~/components/MintButton'
-import { useDiscreteGDA } from "../hooks/discreteGda"
-import { MintSection } from "../components/MintSection"
+import { useStarkMfer } from "../hooks/discreteGda"
 import { Chart } from '~/components/Chart'
 
 
 const Home: NextPage = () => {
-  const { contract: discreteGDA } = useDiscreteGDA()
+  const { contract: discreteGDA } = useStarkMfer()
 
 
   const { data: nameResult } = useStarknetCall({
