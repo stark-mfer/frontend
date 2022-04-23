@@ -30,9 +30,8 @@ const Home: NextPage = () => {
 
   return (
     <div>
-      <h2>my starknet account</h2>
-      <ConnectWallet />
       <h2>stark mfers</h2>
+      <ConnectWallet />
 	  <p> mfers on starknet, made with ❤️  @ ETHAmsterdam. art by sartoshi.  </p>
       <p>NFT Name: {nameValue}</p>
       <IncrementCounter />
