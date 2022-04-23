@@ -1,18 +1,12 @@
 import type { NextPage } from 'next'
-import { ConnectWallet } from '~/components/ConnectWallet'
 import { MintButton } from '~/components/MintButton'
-import { useStarkMfer } from '../hooks/useStarkMfer'
 import { Chart } from '~/components/Chart'
 import Image from 'next/image'
 import mfers from '../images/1.png'
 import { Header } from "../components/Header"
 import { ERC721_STARK_MFER } from "../constants/contracts"
-declare module "*.png"
-
 
 const Home: NextPage = () => {
-  const { contract: starkMfer } = useStarkMfer()
-
   return (
     <div>
       <Header />
