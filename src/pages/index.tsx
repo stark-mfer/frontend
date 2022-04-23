@@ -60,7 +60,7 @@ const Home: NextPage = () => {
 			</StyledDescription>
 
       <h2>Projected Future Price</h2>
-      <StyledDescription> The chart projects the price decline of the NFT over time given Gradual Dutch Auctions (GDAs) and the assumption that no future purchases take place. To learn more about GDAs check: <a href="https://www.paradigm.xyz/2022/04/gda">Paradigm</a></StyledDescription>
+      <StyledDescription> the chart projects the price decline of the NFT over time given Gradual Dutch Auctions (GDAs) and the assumption that no future purchases take place. to learn more about GDAs check: <a href="https://www.paradigm.xyz/2022/04/gda">Paradigm</a></StyledDescription>
       <Chart />
 
       <p> mfers on starknet, made with ❤️  @ ETHAmsterdam. art by sartoshi.  </p>
