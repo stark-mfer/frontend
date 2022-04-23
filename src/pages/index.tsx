@@ -27,7 +27,7 @@ const MainContainer = styled.div`
 const MainImage = styled.div`
   display: flex;
   grid-column: 1 / span 2;
-  width: 500px;
+  width: 100%;
 `
 
 const SideContainer = styled.div`
