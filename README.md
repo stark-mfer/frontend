@@ -22,4 +22,5 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 1. Point the front-end to the deployed GDA contract
 1. Add a "Mint" button
-1. Update the chart to display historical purhcases (by looking at the purchase events)
+1. Update the chart to display historical purhcases (by looking at the `purchase_event` events)
+1. Polish wallet connection

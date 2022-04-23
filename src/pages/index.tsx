@@ -18,6 +18,7 @@ import {
   Tooltip,
   Legend,
 } from 'chart.js';
+import { useDiscreteGDA } from "../hooks/gda"
 
 ChartJS.register(
   ArcElement,
@@ -30,10 +31,9 @@ ChartJS.register(
   Legend
 )
 
-// Consume purchase event
-
 const Home: NextPage = () => {
   const { contract: counter } = useCounterContract()
+  const { contract: discreteGDA } = useDiscreteGDA()
 
   // This is the frontend chart
   const labels = ['January', 'February', 'March'];
@@ -56,6 +56,20 @@ const Home: NextPage = () => {
     args: [],
   })
 
+  const { data: nameResult } = useStarknetCall({
+    contract: discreteGDA,
+    method: 'name',
+    args: [],
+  })
+
+  const nameValue = useMemo(() => {
+    console.log(nameResult)
+    if (nameResult && nameResult.length > 0) {
+      const value = toBN(nameResult[0])
+      return value.toString(10)
+    }
+  }, [nameResult])
+
   const counterValue = useMemo(() => {
     if (counterResult && counterResult.length > 0) {
       const value = toBN(counterResult[0])
@@ -70,6 +84,7 @@ const Home: NextPage = () => {
       <h2>Monta's Counter Contract</h2>
       <p>Address: {counter?.address}</p>
       <p>Value: {counterValue}</p>
+      <p>Name result: {nameValue}</p>
       <IncrementCounter />
       <h2>Recent Transactions</h2>
       <TransactionList />
