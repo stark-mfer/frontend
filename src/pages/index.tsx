@@ -4,7 +4,7 @@ import { MintButton } from '~/components/MintButton'
 import { useStarkMfer } from '../hooks/useStarkMfer'
 import { Chart } from '~/components/Chart'
 import Image from 'next/image'
-import mfers from 'nfts/flipped/images/1.png'
+import mfers from '../images/1.png'
 declare module "*.png"
 
 
@@ -14,7 +14,7 @@ const Home: NextPage = () => {
   return (
     <div>
       <h1>stark mfers</h1>
-      <Image src={mfers} alt="mfers 1"
+      <Image src={mfers} alt="mfer 1"
         width={250}
         height={250}/>
       <p> mfers on starknet, made with ❤️  @ ETHAmsterdam. art by sartoshi.  </p>
@@ -30,11 +30,7 @@ const Home: NextPage = () => {
       <p>contract: {starkMfer?.address}</p>
       <Chart />
 
-      <h2>About</h2>
-      <p> This Project took an existing NFT collection <a href="https://mfers.art/">https://mfers.art/</a>, flipped it vertically, added new features and deployed the NFT on Starknet via Gradua Dutch Auctions (GDAs)</p>
-
-      <h2>Repository</h2>
-      <p> <a href="https://github.com/stark-mfer">Github Repository</a></p>
+      <p>github <a href="https://github.com/stark-mfer">stark-mfer</a></p>
     </div>
   )
 }

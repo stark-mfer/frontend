@@ -21,20 +21,8 @@ ChartJS.register(
   Tooltip,
   Legend
 )
-import styled from "styled-components";
-
-const StyledDiv = styled.div`
-  color: #000;
-  font-size: 28px;
-  width: 600px;
-  line-height: 1.3em;
-  font-weight: 600;
-  letter-spacing: 2px;
-  text-align: center;
-  transition: all 0.3s ease 0s`;
 
 export function Chart() {
-
     // Function to calculate price
     function get_price_data(num_total_purchases: number, time_since_start: number, quantity: number) {
         var initial_price = 10;
@@ -76,25 +64,25 @@ export function Chart() {
 
     // options for labelling
     const options = {
-        responsive: true,
+        responsive: false,
         plugins: {
             legend: {
-                position: 'top' as const,
+                position: 'bottom' as const,
             },
             title: {
                 display: false,
-                text: 'Historical Transactions & Future Price Prediction',
+                text: 'Future Price',
             }
         },
         scales: {
-            x: { 
-                title: { 
-                    display: true, text: 'Time in Blocks'
+            x: {
+                title: {
+                    display: true, text: 'block number'
                 }
             },
             y: {
                 title: {
-                    display: true, text: 'Price in ETH'
+                    display: true, text: 'eth'
                 }
             }
         }
@@ -105,25 +93,15 @@ export function Chart() {
         labels,
         datasets: [
             {
-                label: 'Price for 1 NFT',
+                label: 'price for 1 mfer',
                 data: data_1,
                 borderColor: 'rgb(255, 99, 132)',
                 backgroundColor: 'rgba(255, 99, 132, 0.5)',
             },
-
-            // {
-            //     label: 'Price for 2 NFTs',
-            //     data: data_2,
-            //     borderColor: 'rgb(255, 99, 132)',
-            //     backgroundColor: 'rgba(255, 99, 132, 0.5)',
-            // }
         ],
     }
 
     return (
-        <StyledDiv>
-        < Line data = {data_line} options = {options} />
-        </StyledDiv>
+        <Line width={600} height={300} data={data_line} options={options} />
     )
 }
-
