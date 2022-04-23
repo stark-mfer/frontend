@@ -1,33 +1,31 @@
 # frontend
 
-## Installation
+## how to claim a stark mfer
 
-1. Clone this repo
-2. Run in your shell: 
-```bash
-yarn install
-yarn dev
-```
-3. open localhost
+1. You will need an Argent X wallet. If you don't have one, download [https://www.argent.xyz/argent-x/](https://www.argent.xyz/argent-x/) and create a wallet
+1. get goerli testnet ETH for the Starknet by inputting your address from Argent X in: [https://faucet.goerli.starknet.io/](https://faucet.goerli.starknet.io/)
+1. navigate to [https://stark-mfers.vercel.app/](https://stark-mfers.vercel.app/)
+1. connect your wallet
+1. mint a stark mfer
 
-## How to interact with the Front-End 
-1. You will need an Argent X wallet. If you don't have one, open one here: [https://www.argent.xyz/argent-x/](https://www.argent.xyz/argent-x/)
-2. Get free test ETH for the Starknet by inputting your address from Argent X in: [https://faucet.goerli.starknet.io/](https://faucet.goerli.starknet.io/)
-3. Connect your wallet to the website or open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-4. Start Minting your flipped mfers! 
+## local development
 
-## Tasks
+1. clone this repo
+2. run in your shell
 
-- [x] Point the front-end to the deployed GDA contract
-- [x] Add a "Mint" button
-- [x] Constants for deployed addresses
-- [x] Add image of existing mfer
-- [ ] Deploy this app to Vercel
-- [ ] Display the current price of an mfer (@rootulp blocked)
-- [ ] Display number of mfers left (needs a new view method on contract @fred)
-- [ ] Implement disconnect wallet (seems tricky b/c no `disconnect` function in `@starknet-react/core`)
-- [ ] Add a chart that displays historical purchase prices (by looking at the `purchase_event` events)
-- [ ] Polish UI
+    ```bash
+    yarn install
+    yarn dev
+    ```
+
+3. navigate to <http://localhost:3000/>
+
+## more work
+
+- [ ] display the current price of an mfer (@rootulp blocked)
+- [ ] display number of mfers left
+- [ ] implement disconnect wallet (seems tricky b/c no `disconnect` function in `@starknet-react/core`)
+- [ ] add a chart that displays historical purchase prices (by looking at the `purchase_event` events)
 
 ## Links
 
