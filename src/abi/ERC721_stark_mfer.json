@@ -131,6 +131,18 @@
         "type": "function"
     },
     {
+        "inputs": [],
+        "name": "DiscreteGDA_totalTokensMinted",
+        "outputs": [
+            {
+                "name": "total_minted",
+                "type": "felt"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
         "inputs": [
             {
                 "name": "_initialPrice",
@@ -194,6 +206,10 @@
             },
             {
                 "name": "owner",
+                "type": "felt"
+            },
+            {
+                "name": "total_supply",
                 "type": "felt"
             },
             {
@@ -358,6 +374,18 @@
         "outputs": [
             {
                 "name": "symbol",
+                "type": "felt"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "totalSupply",
+        "outputs": [
+            {
+                "name": "total_supply",
                 "type": "felt"
             }
         ],

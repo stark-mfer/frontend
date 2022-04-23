@@ -131,6 +131,18 @@
         "type": "function"
     },
     {
+        "inputs": [],
+        "name": "DiscreteGDA_totalTokensMinted",
+        "outputs": [
+            {
+                "name": "total_minted",
+                "type": "felt"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
         "inputs": [
             {
                 "name": "_initialPrice",
