@@ -91,6 +91,6 @@ export function Chart() {
     }
 
     return (
-        <Line width={600} height={300} data={data_line} options={options} />
+        <Line margin={"auto"} width={600} height={300} data={data_line} options={options} />
     )
 }

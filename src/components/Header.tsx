@@ -9,9 +9,9 @@ const StyledHeader = styled.div`
 
 export function Header() {
     return(
-        <StyledHeader>
+        <div>
           <h1>stark mfers</h1>
           <ConnectWallet />
-        </StyledHeader>
+        </div>
     )
 }

@@ -53,7 +53,7 @@ export function MintButton() {
   return (
     <div>
       <StyledButton onClick={onMintClicked} >
-          purchase stark mfers
+          mint stark mfer
       </StyledButton>
       {/* {purchasePriceValue} ETH */}
     </div>
