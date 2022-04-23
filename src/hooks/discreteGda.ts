@@ -6,6 +6,6 @@ import discreteGDA from '~/abi/discreteGDA.json'
 export function useDiscreteGDA() {
   return useContract({
     abi: discreteGDA as Abi,
-    address: '0x04043a6c937666e9613c392f233e746814c9324c01c304aa077831166e71639b',
+    address: '0x0385b7cb0647938ce0b7b9df35bf828b1c9f9930f18d75bdcc865a233a04c9e0',
   })
 }

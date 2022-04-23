@@ -4,7 +4,7 @@ import { useMemo } from 'react'
 import { toBN } from 'starknet/dist/utils/number'
 import { ConnectWallet } from '~/components/ConnectWallet'
 import { PurchaseList } from '~/components/PurchaseList'
-import { IncrementCounter } from '~/components/IncrementCounter'
+import { MintButton } from '~/components/MintButton'
 import { useDiscreteGDA } from "../hooks/discreteGda"
 import { MintSection } from "../components/MintSection"
 import { Chart } from '~/components/Chart'
@@ -33,7 +33,8 @@ const Home: NextPage = () => {
       <h2>stark mfers</h2>
       <ConnectWallet />
       <p> mfers on starknet, made with ❤️  @ ETHAmsterdam. art by sartoshi.  </p>
-      <IncrementCounter />
+      <MintButton />
+      <p>contract: {discreteGDA?.address}</p>
       <Chart />
     </div>
   )

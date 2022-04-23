@@ -1,6 +1,7 @@
-import { useStarknet, useStarknetInvoke } from '@starknet-react/core'
-import React from 'react'
+import { useStarknet, useStarknetCall, useStarknetInvoke } from '@starknet-react/core'
+import {React, useMemo} from 'react'
 import { useDiscreteGDA } from '~/hooks/discreteGda'
+import { toBN } from "starknet/dist/utils/number"
 import styled from 'styled-components'
 
 // Styled component named StyledButton
@@ -19,12 +20,14 @@ const StyledButton = styled.button`
   text-align: center;
   transition: all 0.3s ease 0s`;
 
-export function IncrementCounter() {
+export function MintButton() {
   const { account } = useStarknet()
   const { contract: discreteGDA } = useDiscreteGDA()
-  const { data, loading, error, reset, invoke } = useStarknetInvoke({ contract: discreteGDA, method: 'purchaseTokens' })
+  const { loading, error, reset, invoke } = useStarknetInvoke({ contract: discreteGDA, method: 'purchaseTokens' })
 
-console.log(data, loading, error)
+
+  console.log( 'loading', loading, 'error', error, )
+
   if (!account) {
     return null
   }
@@ -32,7 +35,7 @@ console.log(data, loading, error)
   const onMintClicked = async () => {
 	console.log('clicked')
 	console.log(account)
-	let ret = await invoke({ args: ['0x1', '0x1', ['0x1', '0x1']] })
+	let ret = await invoke({ args: ['0x1', account, ['0x1', '0x0']] })
 	console.log(ret)
   }
 
