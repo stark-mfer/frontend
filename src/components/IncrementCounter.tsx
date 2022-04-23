@@ -51,7 +51,7 @@ export function IncrementCounter() {
                 "type": "Uint256"
             }
         ],
-		*/ 
+		*/
 
 // TODO: pull purchase price from contract
 
