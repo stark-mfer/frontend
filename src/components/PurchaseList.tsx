@@ -1,7 +1,7 @@
 import { Transaction, useStarknetTransactionManager } from '@starknet-react/core'
 import React from 'react'
 
-function TransactionItem({ transaction }: { transaction: Transaction }) {
+function PurchaseItem({ transaction }: { transaction: Transaction }) {
   return (
     <span>
       {transaction.transactionHash} - {transaction.status}
@@ -9,15 +9,18 @@ function TransactionItem({ transaction }: { transaction: Transaction }) {
   )
 }
 
-export function TransactionList() {
+export function PurchaseList() {
   const { transactions } = useStarknetTransactionManager()
   return (
-    <ul>
+    <div>
+      <h2>Purchase List</h2>
+      <ul>
       {transactions.map((transaction, index) => (
         <li key={index}>
-          <TransactionItem transaction={transaction} />
+          <PurchaseItem transaction={transaction} />
         </li>
       ))}
-    </ul>
+      </ul>
+    </div>
   )
 }
