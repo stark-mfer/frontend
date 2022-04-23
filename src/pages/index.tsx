@@ -4,6 +4,7 @@ import { useMemo } from 'react'
 import { toBN } from 'starknet/dist/utils/number'
 import { ConnectWallet } from '~/components/ConnectWallet'
 import { PurchaseList } from '~/components/PurchaseList'
+import { IncrementCounter } from '~/components/IncrementCounter'
 import { Line } from 'react-chartjs-2'
 import {
   Chart as ChartJS,
@@ -69,9 +70,8 @@ const Home: NextPage = () => {
       <h2>stark mfers</h2>
 	  <p> mfers on starknet, made with ❤️  @ ETHAmsterdam. art by sartoshi.  </p>
       <p>NFT Name: {nameValue}</p>
-      <MintSection />
+      <IncrementCounter />
       <PurchaseList />
-      <p>Address: {counter?.address}</p>
       <Line data = {data_line}/>
     </div>
   )

@@ -22,7 +22,7 @@ const StyledButton = styled.button`
 export function IncrementCounter() {
   const { account } = useStarknet()
   const { contract: discreteGDA } = useDiscreteGDA()
-  const { invoke } = useStarknetInvoke({ contract: discreteGDA, method: 'purchaseTokens' })
+  const { invoke } = useStarknetInvoke({ contract: discreteGDA, method: 'setInitialPrice' })
 
   if (!account) {
     return null
@@ -31,7 +31,7 @@ export function IncrementCounter() {
   const onMintClicked = async () => {
 	console.log('clicked')
 	console.log(account)
-	let ret = await invoke({ args: ['0x1', account, 55] })
+	let ret = await invoke({ args: ['0x1'] })
 	console.log(ret)
   }
 
